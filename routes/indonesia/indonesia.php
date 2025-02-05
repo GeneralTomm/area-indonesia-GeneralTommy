@@ -16,14 +16,6 @@
 //     $router->get('/', 'cari\CariIndonesiaController@aksiCariKepulauan');
 // });
 
-// // provinsi
-// $router->group(['prefix' => 'provinsi'], function () use ($router) {
-//     $router->get('/', 'ProvinsiController@getSearchData');
-// });
-// $router->group(['prefix' => 'indonesia'], function () use ($router) {
-//     // kepulauan
-
-// });
 $router->group(['prefix' => 'api/indonesia', "namespace" => "indonesia"], function () use ($router) {
     $router->group(['prefix' => 'cari'], function () use ($router) {
         $router->get('/provinsi', 'ProvinsiController@getSearchData');
